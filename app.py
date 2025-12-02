@@ -131,14 +131,13 @@ dilution_factor = st.sidebar.slider(
 st.sidebar.markdown("---")
 st.sidebar.markdown("""
 ### About THC
-**Total Hemocyte Count (THC)** measures the number of hemocytes 
-(immune cells) in shrimp hemolymph. Higher THC indicates better 
-immune status and disease resistance.
+**Total Hemocyte Count (THC)** measures the number of hemocytes in shrimp hemolymph. Higher THC indicates better 
+immune status and a higher disease resistance.
 """)
 
 # Main app
 st.title("🦐 Shrimp Hemocyte Counter (THC)")
-st.markdown("*AI-powered Total Hemocyte Count Analysis for Aquaculture Management*")
+st.markdown("*AI-powered Total Hemocyte Count analysis for aquaculture management*")
 
 # Create tabs
 tab1, tab2, tab3 = st.tabs(["📊 Analysis", "📋 Protocol", "📚 Information"])
