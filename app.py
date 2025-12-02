@@ -81,7 +81,7 @@ def calculate_thc(count, dilution_factor=1):
     THC (cells/μL) = count * dilution_factor * 71.42857142857 (approx volume occupied by microscope view area in Neubauer with 40x objective is about 0.014 microliters -0.00025 microliters occupied by the smallest square)
     Return in cells/mL (multiply by 1000 from cells/μL)
     """
-    thc_per_ul = count * dilution_factor * 1.42857142857
+    thc_per_ul = count * dilution_factor * 71.42857142857
     thc_per_ml = thc_per_ul * 1000
     return thc_per_ul, thc_per_ml
 
