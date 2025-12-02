@@ -353,7 +353,7 @@ with tab2:
         
         **Formula:**
         ```
-        THC (cells/μL) = (Hemocytes counted) × (Dilution factor) × 10⁴
+        THC (cells/μL) = (Hemocytes counted) × (Dilution factor) × 71.43 (conversion Neubauer chamber volume with 40x objective lens)
         THC (cells/mL) = THC (cells/μL) × 1,000
         ```
         
