@@ -24,12 +24,11 @@ st.markdown("""
         border-left: 5px solid #1f77b4;
     }
     .recommendation-card {
-        background-color: #000000 !important;  /* black background */
-        color: #ffffff !important;             /* white font */
+        background-color: #f9f9f9;
         padding: 15px;
         border-radius: 8px;
         margin: 10px 0;
-        border: 1px solid #ffffff !important; /* white border */
+        border: 1px solid #ddd;
     }
     .protocol-section {
         background-color: #f5f5f5;
@@ -92,7 +91,6 @@ def get_recommendation(thc_value):
         return "low", {
             "range": "<1.0×10⁶ cells/mL",
             "status": "🔴 LOW IMMUNITY",
-            "color": "transparent", 
             "water": "Monitor parameters that stress shrimp, especially Vibrio counts, ammonia and nitrites.",
             "pond": "Central drain flushing and disinfectant application advised.",
             "feeding": "Immune stimulant feed coating at a minimum rate of 50%."
@@ -101,7 +99,6 @@ def get_recommendation(thc_value):
         return "medium", {
             "range": "1.0×10⁶ - 1.0×10⁷ cells/mL",
             "status": "🟡 MODERATE IMMUNITY",
-            "color": "transparent",
             "water": "Monitor parameters that stress shrimp, especially Vibrio counts, ammonia and nitrites.",
             "pond": "Central drain flushing and disinfectant application advised.",
             "feeding": "Immune-enhance feed inclusion in the range of 25 to 50%."
@@ -110,7 +107,6 @@ def get_recommendation(thc_value):
         return "high", {
             "range": ">1.0×10⁷ cells/mL",
             "status": "🟢 GOOD IMMUNITY",
-            "color": "transparent",
             "water": "Maintain regular water monitoring.",
             "pond": "Continue with current management.",
             "feeding": "Continue with existing feeding unless unstable weather is forecasted or disease season is starting."
@@ -424,20 +420,9 @@ with tab3:
         }
     ]
     
-    # for item in thc_ranges:
-    #     st.markdown(f"""
-    #     <div class="recommendation-card" style="border-left: 5px solid {item['color']};">
-    #     <h4>{item['status']}</h4>
-    #     <strong>Range:</strong> {item['range']}<br><br>
-    #     <strong>💧 Water Management:</strong> {item['water']}<br><br>
-    #     <strong>🌊 Pond Bottom Management:</strong> {item['pond']}<br><br>
-    #     <strong>🍽️ Feeding Management:</strong> {item['feeding']}
-    #     </div>
-    #     """, unsafe_allow_html=True)
-    
     for item in thc_ranges:
         st.markdown(f"""
-        <div class="recommendation-card">
+        <div class="recommendation-card" style="border-left: 5px solid {item['color']};">
         <h4>{item['status']}</h4>
         <strong>Range:</strong> {item['range']}<br><br>
         <strong>💧 Water Management:</strong> {item['water']}<br><br>
@@ -445,7 +430,7 @@ with tab3:
         <strong>🍽️ Feeding Management:</strong> {item['feeding']}
         </div>
         """, unsafe_allow_html=True)
-
+    
     st.markdown("---")
     
     st.subheader("🔬 Key Factors Affecting THC")
