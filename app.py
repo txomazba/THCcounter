@@ -24,7 +24,7 @@ st.markdown("""
         border-left: 5px solid #1f77b4;
     }
     .recommendation-card {
-        background-color: #f5f5f5 !important;
+        background-color: #f9f9f9;
         padding: 15px;
         border-radius: 8px;
         margin: 10px 0;
@@ -397,7 +397,7 @@ with tab3:
         {
             "range": "<1.0×10⁶ cells/mL",
             "status": "🔴 LOW IMMUNITY",
-            "color": "#ff6b6b",
+            "color": "#faf5f5",
             "water": "Monitor parameters that stress shrimp, especially Vibrio counts, ammonia and nitrites.",
             "pond": "Central drain flushing and disinfectant application advised.",
             "feeding": "Immune stimulant feed coating at a minimum rate of 50%."
@@ -405,7 +405,7 @@ with tab3:
         {
             "range": "1.0×10⁶ - 1.0×10⁷ cells/mL",
             "status": "🟡 MODERATE IMMUNITY",
-            "color": "#ffa500",
+            "color": "#faf5f5",
             "water": "Monitor parameters that stress shrimp, especially Vibrio counts, ammonia and nitrites.",
             "pond": "Central drain flushing and disinfectant application advised.",
             "feeding": "Immune-enhance feed inclusion in the range of 25 to 50%."
@@ -413,7 +413,7 @@ with tab3:
         {
             "range": ">1.0×10⁷ cells/mL",
             "status": "🟢 GOOD IMMUNITY",
-            "color": "#51cf66",
+            "color": "#faf5f5",
             "water": "Maintain regular water monitoring.",
             "pond": "Continue with current management.",
             "feeding": "Continue with existing feeding unless unstable weather is forecasted or disease season is starting."
